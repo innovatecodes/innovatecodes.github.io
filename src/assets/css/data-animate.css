@@ -1,0 +1,25 @@
+[data-animate] {
+  opacity: 0;
+  transition: 0.24s ease-in;
+}
+
+[data-animate="top-axis"] {
+  transform: translate3d(0, -15px, 0);
+}
+
+[data-animate="right-axis"] {
+  transform: translate3d(15px, 0, 0);
+}
+
+[data-animate="bottom-axis"] {
+  transform: translate3d(0, 15px, 0);
+}
+[data-animate="left-axis"] {
+  transform: translate3d(-15px, 0, 0);
+}
+
+[data-animate].animate {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}

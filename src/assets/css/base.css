@@ -1,0 +1,28 @@
+html {
+  --_color: #62676b;
+   --__color: #686d71;
+   --_background-color: #dee2e6;
+   --__background-color: #f8f9fa;
+   --_background-menu: #dcdcdc;
+   --_background-highlights: #ebebeb;
+  --__background-highlights: #eeeeee;
+  --_border-color: #adb5bd;
+   font-size: 100%;
+   overflow-x: hidden;
+   scroll-behavior: smooth;
+   /* Habilita rolagem suave -> chrome://flags */
+ }
+ 
+ body {
+   overflow-x: hidden;
+   font-family: "Lato", sans-serif;
+   font-size: 1rem;
+   letter-spacing: 1px;
+   /* Adiciona uma margem interna no body da altura do menu */
+   padding-top: 61px;
+   background-color: var(--_background-color);
+   color: var(--_color);
+   min-height: 100vh;
+   position: relative;
+ }
+ 

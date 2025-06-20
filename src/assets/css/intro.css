@@ -1,0 +1,40 @@
+/* Intro */
+.intro {
+  position: relative;
+  padding: 71px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 7.5px;
+}
+
+.intro h1 + p {
+  font-size: 1.125rem;
+  text-align: center;
+  max-width: 540px;
+}
+
+.intro sup {
+  font-weight: bold;
+}
+
+.intro .learn-more {
+  position: relative;
+  text-align: center;
+  font-size: 1.125rem;
+  text-transform: capitalize;
+  border-radius: 4px;
+  display: block;
+  width: 140px;
+  height: 48px;
+  line-height: calc(48px - 4px);
+  background-color: var(--_background-highlights);
+  border: 2px solid var(--_border-color);
+  transition: 0.2s ease-in;
+}
+
+.intro .learn-more:hover {
+  color: var(--__color);
+  background-color: var(--__background-highlights);
+}

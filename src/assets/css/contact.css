@@ -1,0 +1,132 @@
+/* Contact */
+.contact article:last-child::before,
+.contact article:last-child::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.contact-form {
+  width: calc(480px - 20px);
+  /* width: calc(100% - 20px); */
+  margin: 0 10px;
+  float: left;
+}
+
+.contact-form fieldset {
+  border: none;
+  outline: none;
+  border: 2px solid var(--_border-color);
+  border-radius: 4px;
+  padding: 0 7.5px;
+}
+
+.contact-form fieldset legend {
+  margin-bottom: 7.5px;
+}
+
+.contact-form fieldset label {
+  display: block;
+}
+
+.contact-form input,
+.contact-form textarea {
+  outline: none;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  color: currentColor;
+  background-color: inherit;
+  border: 2px solid var(--_border-color);
+  border-radius: 4px;
+  font-size: initial;
+  letter-spacing: 1px;
+  width: 100%;
+  padding: 7.5px;
+  margin: 7.5px 0;
+  resize: vertical;
+  transition: border 0.2s ease-in;
+}
+
+.contact-form fieldset input:focus,
+.contact-form fieldset textarea:focus {
+  border: 2px solid var(--_border-color);
+}
+
+.contact-form fieldset button {
+  position: relative;
+  width: 120px;
+  height: 48px;
+  margin-bottom: 7.5px;
+  border-radius: 4px;
+  font-family: "Lato", sans-serif;
+  font-size: unset;
+  letter-spacing: 1px;
+  line-height: calc(48px - 4px);
+  color: currentColor;
+  border: 2px solid var(--_border-color);
+  background-color: var(--_background-highlights);
+  transition: 0.2s ease-in;
+}
+
+.contact article fieldset button:hover {
+  cursor: pointer;
+  color: var(--__color);
+  background-color: var(--__background-highlights);
+}
+
+.contact-form fieldset button::before {
+  content: "➨";
+  display: block;
+  position: absolute;
+  font-size: 0.8375rem;
+  left: 10px;
+  opacity: 0;
+  transition: 0.2s ease-in;
+}
+
+.contact-form fieldset button:hover::before {
+  opacity: 1;
+  left: 11px;
+}
+
+.contact article .location {
+  width: calc(480px - 20px);
+  margin: 0 10px;
+  float: left;
+}
+
+.contact article .location i {
+  display: inline-block;
+  margin-right: 7.5px;
+}
+
+.contact article .location h3 {
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.location address {
+  margin-bottom: 15px;
+}
+
+.location address ul li {
+  list-style-type: none;
+  display: flex;
+  column-gap: 7.5px;
+}
+
+.location address li::before {
+  content: "";
+  display: flex;
+  width: 6px;
+  height: 6px;
+  border-radius: 6px;
+  align-self: center;
+  background-color: #dd4b25;
+}
+
+.location iframe {
+  border: 0;
+  width: 100%;
+  aspect-ratio: 16/9;
+}

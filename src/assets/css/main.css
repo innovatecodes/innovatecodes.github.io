@@ -1,0 +1,50 @@
+/* Main */
+main > div{
+  padding: 0 calc(15px - 10px);
+}
+
+main > div:nth-of-type(odd) {
+  /* Divs ímpares */
+  background-color: var(--__background-color);
+}
+
+main > div:nth-of-type(even) {
+  /* Div par */
+  background-color: inherit;
+}
+
+section {
+  padding: 61px 0;
+  max-width: 960px;
+  margin: 0 auto;
+  background-color: transparent;
+}
+
+.subtitle {
+  max-width: 640px;
+  margin: 0 auto 15px auto;
+  text-align: center;
+  padding: 0 10px;
+}
+
+.arrow {
+  position: fixed;
+  right: 7.5px;
+  bottom: 15px;
+  font-size: 2.5rem;
+  opacity: 0;
+  transition: 0.2s ease-in;
+  transform: scale(1);
+}
+
+.arrow:hover {
+  color: var(--__cor);
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.arrow.angle-up {
+  opacity: 0.8;
+  z-index: 4;
+}
+

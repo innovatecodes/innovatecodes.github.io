@@ -1,0 +1,281 @@
+@import "reset.css";
+@import "classes.css";
+@import "header.css";
+@import "base.css";
+@import "fonts.css";
+@import "intro.css";
+@import "main.css";
+@import "about.css";
+@import "experience.css";
+@import "contact.css";
+@import "footer.css";
+@import "data-animate.css";
+
+/* Responsive */
+@media (max-width: 767.98px) {
+  h1 {
+    font-size: 2.75rem;
+    max-width: 360px;
+  }
+
+  nav {
+    width: 100%;
+    margin: 0;
+  }
+
+  button.toggle {
+    display: block;
+    width: 35px;
+    height: 35px;
+    left: 10px;
+    color: currentColor;
+    background-color: inherit;
+    outline: none;
+    border: none;
+    transition: 0.2s ease-in;
+    z-index: 4;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  button.toggle.move {
+    left: 270px;
+    border: 3px solid currentColor !important;
+  }
+
+  nav #logo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin-left: 0;
+    visibility: visible;
+    transition: 0.2s ease-in;
+  }
+
+  nav.fade #logo,
+  nav.fade label {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  nav ul {
+    float: none;
+    clear: right;
+    margin: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 4;
+    max-width: 260px;
+    max-height: 100%;
+    min-height: 100vh;
+    background-color: var(--_background-menu);
+    visibility: hidden;
+    overflow-y: hidden;
+    transform: translate3d(-100%, 0, 0);
+    transition: 0.2s ease-in;
+  }
+
+  nav ul li {
+    float: none;
+    clear: left;
+  }
+
+  nav ul li a::before {
+    content: none;
+  }
+
+  nav ul li:first-child {
+    width: 100%;
+    height: 61px;
+    display: table;
+    border-bottom: 2px solid var(--_border-color);
+  }
+
+  nav ul li a:not(#last-link)::after {
+    content: "";
+    display: block;
+    border-bottom: 2px solid var(--_border-color);
+  }
+
+  nav.fade #menu li #favorite-icon {
+    visibility: visible;
+    opacity: 1;
+    width: 260px;
+    height: 35px;
+  }
+
+  nav.fade #menu li #favorite-icon img {
+    aspect-ratio: 1/1;
+    animation-name: animate-logo;
+    animation-duration: 0.2s;
+    animation-timing-function: ease-in;
+    animation-delay: 0.2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    display: block;
+    width: auto;
+    height: inherit;
+    position: relative;
+    left: calc(260px - 35px - 15px);
+  }
+
+  @keyframes animate-logo {
+    from {
+      left: calc(260px - 35px - 15px);
+      transform: rotate(360deg);
+    }
+    to {
+      left: 15px;
+      transform: rotate(0deg);
+    }
+  }
+  /* Fim */
+
+  #menu i {
+    display: inline-block;
+    margin-right: 15px;
+    font-size: 1.25rem;
+  }
+
+  #bar {
+    display: block;
+    border-top: 3px solid;
+    cursor: pointer;
+  }
+
+  #bar::before,
+  #bar::after {
+    content: "";
+    display: block;
+    border-top: 3px solid;
+    margin-top: 5px;
+    transform-origin: center;
+    transition: 0.2s ease-in;
+  }
+
+  nav.active ul {
+    visibility: visible;
+    overflow-y: auto;
+    transform: translate3d(0, 0, 0);
+  }
+
+  nav.active #bar {
+    border-top-color: transparent;
+  }
+
+  nav.active #bar::before {
+    transform: rotate(-135deg);
+  }
+
+  nav.active #bar::after {
+    transform: rotate(135deg);
+    position: relative;
+    top: -8px;
+  }
+
+  .about,
+  .experience,
+  .contact {
+    max-width: 540px;
+  }
+
+  .about article div:first-of-type {
+    width: calc(100% - 20px);
+    margin-bottom: 15px;
+  }
+
+  .about article div:last-of-type {
+    width: calc(100% - 20px);
+  }
+
+  .experience article {
+    flex-direction: column;
+  }
+
+  .experience article .items {
+    margin-bottom: 15px;
+  }
+
+  .contact article .contact-form {
+    width: calc(100% - 20px);
+    margin-bottom: 15px;
+  }
+
+  .contact article .location {
+    width: calc(100% - 20px);
+  }
+
+  .social-media {
+    margin: auto;
+    justify-content: center;
+  }
+
+  footer {
+    flex-direction: column;
+    row-gap: 7.5px;
+    padding: 15px calc(15px - 10px);
+  }
+
+  footer p:only-of-type {
+    order: 2;
+    text-align: center;
+    margin: 0;
+  }
+
+  footer .social-media {
+    order: 1;
+  }
+
+  footer .privacy-terms {
+    order: 3;
+  }
+
+  footer #footer-logo {
+    order: 4;
+    margin: 0;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  h1 {
+    font-size: 3.65rem;
+  }
+
+  nav {
+    max-width: 720px;
+  }
+
+  .about,
+  .experience,
+  .contact {
+    max-width: 720px;
+  }
+
+  .about article > div:nth-child(1),
+  .about article > div:nth-child(2) {
+    width: calc(360px - 20px);
+  }
+
+  .experience article .items {
+    flex-basis: 0;
+  }
+
+  .experience article .intensive-courses {
+    flex-basis: 260px;
+  }
+
+  .contact article .contact-form {
+    width: calc(360px - 20px);
+  }
+
+  .contact article .location {
+    width: calc(360px - 20px);
+  }
+
+  footer {
+    padding: 7.5px calc((100% - 720px) / 2);
+  }
+}
