@@ -56,7 +56,7 @@
 document.querySelector("form").addEventListener("submit", function (event) {
   event.preventDefault();
 
-  const apiUrl = `http://innovatecodes-lb-981669855.sa-east-1.elb.amazonaws.com/api/send-email`;
+  const apiUrl = `https://naturally-apt-terrapin.ngrok-free.app/api/send-email`;
   const formElements = document.querySelectorAll(".before-element");
   const successAlertElement = document.querySelector(".success-alert");
   const active = `active`,
