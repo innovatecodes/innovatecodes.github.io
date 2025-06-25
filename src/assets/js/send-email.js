@@ -1,3 +1,4 @@
+/*
 (function (doc) {
   const masks = {
     phone(digitsOnly) {
@@ -52,6 +53,7 @@
     });
   });
 })(document);
+*/
 
 document.querySelector("form").addEventListener("submit", function (event) {
   event.preventDefault();
