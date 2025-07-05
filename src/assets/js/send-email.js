@@ -58,14 +58,14 @@
 document.querySelector("form").addEventListener("submit", function (event) {
   event.preventDefault();
 
-  const apiUrl = ``;
+  const apiUrl = `https://auto-mailer.azurewebsites.net/api/send-email`;
   const formElements = document.querySelectorAll(".before-element");
   const successAlertElement = document.querySelector(".success-alert");
   const active = `active`,
     dangerAlert = `danger-alert`;
 
-  // createRequestBody(this, "multipart/form-data", apiUrl);
-  createRequestBody(this, "application/json", apiUrl);
+  createRequestBody(this, "multipart/form-data", apiUrl);
+  // createRequestBody(this, "application/json", apiUrl);
 
   function createRequestBody(formElement, contentType, apiUrl) {
     switch (contentType) {
